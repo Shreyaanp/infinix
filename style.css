@@ -22,18 +22,18 @@ html, body {
 
 .playground{
 
-  position: fixed;
-  width: 100%;
+  position: absolute;
+  width: 100vw;
   height: 100vh;
   display: block;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-
+  object-fit: contain;
 }
 .bottomPosition{
 

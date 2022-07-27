@@ -101,7 +101,7 @@ class CreateParticles {
 			amount: 1500,
 			particleSize: 1,
 			particleColor: 0xffffff,
-			textSize:12 ,
+			textSize: 16,
 			area: 250,
 			ease: .05,
 		}
@@ -279,10 +279,27 @@ class CreateParticles {
 	}
 
 	createText(){ 
-
+		var viewPortWidth;
+		var viewPortHeight;
+	   
 		let thePoints = [];
-		const texts= 4;
-		let shapes = this.font.generateShapes( this.data.text , texts  );
+		viewPortWidth = window.innerWidth;
+		console.log(viewPortWidth, viewPortHeight)
+		var texts=  8;
+		if(viewPortWidth <550 )
+		{
+			texts = 2;
+		}
+		else if(viewPortWidth>=550 && viewPortWidth<1000 )
+		{
+			texts = 3;
+		}
+		else if(viewPortWidth>=1000 && viewPortWidth<1500)
+		{
+			texts = 6;
+		}
+		console.log(texts)
+		let shapes = this.font.generateShapes( this.data.text , texts );
 		let geometry = new THREE.ShapeGeometry( shapes );
 		geometry.computeBoundingBox();
 	
