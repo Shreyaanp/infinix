@@ -281,7 +281,7 @@ class CreateParticles {
 	createText(){ 
 
 		let thePoints = [];
-		const texts= 2;
+		const texts= 4;
 		let shapes = this.font.generateShapes( this.data.text , texts  );
 		let geometry = new THREE.ShapeGeometry( shapes );
 		geometry.computeBoundingBox();
